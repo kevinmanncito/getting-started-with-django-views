@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Test Page {% endblock %}
+
+{% block header %}<h1>Test Page</h1>{% endblock %}
+
+{% block content %}
+  <p>These are my friends: </p>
+  <ul>
+    {% for friend in friends %}
+      <li>{{ friend|title }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
